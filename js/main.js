@@ -25,37 +25,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Filtraggio menu
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const menuItems = document.querySelectorAll('.menu-item');
-    
-    filterButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // Rimuove la classe active da tutti i bottoni
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            
-            // Aggiunge la classe active al bottone cliccato
-            this.classList.add('active');
-            
-            const filterValue = this.getAttribute('data-filter');
-            
-            // Mostra/Nasconde gli elementi del menu in base al filtro
-            menuItems.forEach(item => {
-                if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-                    item.style.display = 'block';
-                    setTimeout(() => {
-                        item.classList.add('visible');
-                    }, 10);
-                } else {
-                    item.classList.remove('visible');
-                    setTimeout(() => {
-                        item.style.display = 'none';
-                    }, 300);
-                }
-            });
-        });
-    });
-    
     // Animazione elementi al scroll
     const observerOptions = {
         root: null,
@@ -67,23 +36,12 @@ document.addEventListener('DOMContentLoaded', function() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                
-                // Se l'elemento è un menu-item, aggiunge un delay per un effetto a cascata
-                if (entry.target.classList.contains('menu-item')) {
-                    const index = Array.from(menuItems).indexOf(entry.target);
-                    entry.target.style.transitionDelay = `${(index % 6) * 0.1}s`;
-                }
             }
         });
     }, observerOptions);
     
-    // Osserva gli elementi del menu
-    menuItems.forEach(item => {
-        observer.observe(item);
-    });
-    
-    // Osserva altri elementi che dovrebbero apparire al scroll
-    const scrollElements = document.querySelectorAll('.feature, .about-image, .about-text, .contact-info, .reservation-form');
+    // Osserva elementi che dovrebbero apparire al scroll
+    const scrollElements = document.querySelectorAll('.feature, .menu-highlight, .about-image, .about-text, .contact-info, .reservation-form');
     scrollElements.forEach(el => {
         el.classList.add('fade-in-element');
         observer.observe(el);
@@ -93,13 +51,40 @@ document.addEventListener('DOMContentLoaded', function() {
     const bookingForm = document.getElementById('booking-form');
     
     if (bookingForm) {
+        // Imposta la data minima (oggi)
+        const dateInput = document.getElementById('date');
+        if (dateInput) {
+            const today = new Date();
+            const minDate = today.toISOString().split('T')[0];
+            
+            // Aggiungi attributo min quando diventa type="date"
+            dateInput.addEventListener('focus', function() {
+                if (this.type === 'date') {
+                    this.setAttribute('min', minDate);
+                }
+            });
+        }
+        
+        // Imposta l'ora corrente
+        const timeInput = document.getElementById('time');
+        if (timeInput) {
+            timeInput.addEventListener('focus', function() {
+                if (this.type === 'time') {
+                    const now = new Date();
+                    const currentHour = now.getHours().toString().padStart(2, '0');
+                    const currentMinute = now.getMinutes().toString().padStart(2, '0');
+                    this.setAttribute('min', `${currentHour}:${currentMinute}`);
+                }
+            });
+        }
+        
         bookingForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
             // Validazione semplice
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
             const date = document.getElementById('date').value;
             const time = document.getElementById('time').value;
             const guests = document.getElementById('guests').value;
@@ -111,16 +96,20 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Simula l'invio della prenotazione
             const submitButton = bookingForm.querySelector('.btn-submit');
-            const originalText = submitButton.textContent;
+            const originalText = submitButton.innerHTML;
             
-            submitButton.textContent = 'Invio in corso...';
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Invio in corso...';
             submitButton.disabled = true;
             
             setTimeout(() => {
                 alert('Grazie per la tua prenotazione! Ti confermeremo via email o telefono al più presto.');
                 bookingForm.reset();
                 
-                submitButton.textContent = originalText;
+                // Ripristina i campi data e ora a tipo text
+                document.getElementById('date').type = 'text';
+                document.getElementById('time').type = 'text';
+                
+                submitButton.innerHTML = originalText;
                 submitButton.disabled = false;
             }, 1500);
         });
@@ -177,22 +166,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
         lastScrollTop = scrollTop;
     });
-    
-    // Imposta la data minima per la prenotazione (oggi)
-    const dateInput = document.getElementById('date');
-    if (dateInput) {
-        const today = new Date().toISOString().split('T')[0];
-        dateInput.setAttribute('min', today);
-    }
-    
-    // Imposta l'ora minima per la prenotazione
-    const timeInput = document.getElementById('time');
-    if (timeInput) {
-        const now = new Date();
-        const currentHour = now.getHours().toString().padStart(2, '0');
-        const currentMinute = now.getMinutes().toString().padStart(2, '0');
-        timeInput.setAttribute('min', `${currentHour}:${currentMinute}`);
-    }
     
     // Aggiunge CSS per gli elementi fade-in
     const style = document.createElement('style');
