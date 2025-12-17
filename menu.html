@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Officina del Gusto</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+</head>
+<body>
+    <!-- Navbar per menu.html -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Officina del Gusto</a>
+            <button class="menu-toggle" aria-label="Apri menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">Chi Siamo</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contatti</a></li>
+                <li><a href="index.html#reservation" class="nav-link btn-reservation">Prenota</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header del Menu -->
+    <header class="menu-header">
+        <div class="container">
+            <div class="menu-header-content">
+                <h1 class="menu-main-title">MENU – Officina del Gusto</h1>
+                <p class="menu-subtitle">Tutti i nostri piatti sono preparati al momento con ingredienti freschi di stagione</p>
+                <div class="menu-header-actions">
+                    <a href="index.html#reservation" class="btn btn-primary">
+                        <i class="fas fa-calendar-alt"></i> Prenota un Tavolo
+                    </a>
+                    <a href="index.html" class="btn btn-secondary">
+                        <i class="fas fa-home"></i> Torna alla Home
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu Container -->
+    <main class="menu-container">
+        <div class="container">
+<!-- Navigazione categorie - Design Elegante -->
+<div class="menu-categories-container">
+    <nav class="menu-categories-nav-elegant">
+        <div class="category-nav-wrapper">
+            <a href="#antipasti" class="category-nav-item active" data-category="antipasti">
+                <div class="category-icon">🥗</div>
+                <div class="category-text">
+                    <span class="category-name">Antipasti</span>
+                    <span class="category-count">(5)</span>
+                </div>
+            </a>
+            
+            <a href="#pizze" class="category-nav-item" data-category="pizze">
+                <div class="category-icon">🍕</div>
+                <div class="category-text">
+                    <span class="category-name">Pizze</span>
+                    <span class="category-count">(6)</span>
+                </div>
+            </a>
+            
+            <a href="#primi" class="category-nav-item" data-category="primi">
+                <div class="category-icon">🍝</div>
+                <div class="category-text">
+                    <span class="category-name">Primi Piatti</span>
+                    <span class="category-count">(5)</span>
+                </div>
+            </a>
+            
+            <a href="#secondi" class="category-nav-item" data-category="secondi">
+                <div class="category-icon">🥩</div>
+                <div class="category-text">
+                    <span class="category-name">Secondi</span>
+                    <span class="category-count">(5)</span>
+                </div>
+            </a>
+            
+            <a href="#dolci" class="category-nav-item" data-category="dolci">
+                <div class="category-icon">🍰</div>
+                <div class="category-text">
+                    <span class="category-name">Dolci</span>
+                    <span class="category-count">(5)</span>
+                </div>
+            </a>
+        </div>
+        
+        <div class="nav-indicator"></div>
+    </nav>
+    
+    <div class="category-nav-hint">
+        <i class="fas fa-chevron-down"></i>
+        <span>Scorri per esplorare tutte le categorie</span>
+    </div>
+</div>
+            <!-- Antipasti -->
+            <section id="antipasti" class="menu-category-section">
+                <div class="category-header">
+                    <h2 class="category-title">🥗 Antipasti (5)</h2>
+                    <p class="category-description">Inizia il tuo pasto con i nostri antipatti freschi e leggeri</p>
+                </div>
+                
+                <div class="menu-items-list">
+                    <!-- Caprese -->
+                    <div class="menu-item-fullscreen">
+                        <div class="menu-item-content">
+                            <div class="dish-header">
+                                <h3 class="dish-name">Caprese</h3>
+                                <div class="dish-price">€ 12,00</div>
+                            </div>
+                            <p class="dish-description">Mozzarella di bufala, pomodoro, basilico, olio EVO</p>
+                            <div class="dish-tags">
+                                <span class="dish-tag">Vegetariano</span>
+                                <span class="dish-tag">Fresco</span>
+                            </div>
+                        </div>
+                        <div class="menu-item-image">
+                            <img src="assets/images/caprese.jpg" alt="Caprese">
+                        </div>
+                    </div>
+                    
+                    <!-- Bruschette al Pomodoro -->
+                    <div class="menu-item-fullscreen">
+                        <div class="menu-item-content">
+                            <div class="dish-header">
+                                <h3 class="dish-name">Bruschette al Pomodoro</h3>
+                                <div class="dish-price">€ 8,50</div>
+                            </div>
+                            <p class="dish-description">Pane tostato, pomodoro fresco, basilico, olio EVO</p>
+                            <div class="dish-tags">
+                                <span class="dish-tag">Vegetariano</span>
+                                <span class="dish-tag">Vegano su richiesta</span>
+                            </div>
+                        </div>
+                        <div class="menu-item-image">
+                            <img src="assets/images/bruschetta.jpg" alt="Bruschette al Pomodoro">
+                        </div>
+                    </div>
+                    
+                    <!-- Patate al Forno -->
+                    <div class="menu-item-fullscreen">
+                        <div class="menu-item-content">
+                            <div class="dish-header">
+                                <h3 class="dish-name">Patate al Forno</h3>
+                                <div class="dish-price">€ 7,00</div>
+                            </div>
+                            <p class="dish-description">Patate speziate, croccanti e dorate</p>
+                            <div class="dish-tags">
+                                <span class="dish-tag">Vegetariano</span>
+                                <span class="dish-tag">Vegano</span>
+                            </div>
+                        </div>
+                        <div class="menu-item-image">
+                            <img src="assets/images/patate.jpg" alt="Patate al Forno">
+                        </div>
+                    </div>
+                    
+                    <!-- Tagliere di Salumi -->
+                    <div class="menu-item-fullscreen">
+                        <div class="menu-item-content">
+                            <div class="dish-header">
+                                <h3 class="dish-name">Tagliere di Salumi</h3>
+                                <div class="dish-price">€ 16,00</div>
+                            </div>
+                            <p class="dish-description">Prosciutto crudo, salame, coppa, accompagnato da pane</p>
+                            <div class="dish-tags">
+                                <span class="dish-tag">Salumi italiani</span>
+                            </div>
+                        </div>
+                        <div class="menu-item-image">
+                            <img src="assets/images/salumi.jpg" alt="Tagliere di Salumi">
+                        </div>
+                    </div>
+                    
+                    <!-- Frittelle di Verdure -->
+                    <div class="menu-item-fullscreen">
+                        <div class="menu-item-content">
+                            <div class="dish-header">
+                                <h3 class="dish-name">Frittelle di Verdure</h3>
+                                <div class="dish-price">€ 9,50</div>
+                            </div>
+                            <p class="dish-description">Piccole frittelle leggere di zucchine e carote, servite calde</p>
+                            <div class="dish-tags">
+                                <span class="dish-tag">Vegetariano</span>
+                                <span class="dish-tag">Fritto leggero</span>
+                            </div>
+                        </div>
+                        <div class="menu-item-image">
+                            <img src="assets/images/verdura.jpg" alt="Frittelle di Verdure">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pizze -->
+            <section id="pizze" class="menu-category-section">
+                <div class="category-header">
+                    <h2 class="category-title">🍕 Pizze (6)</h2>
+                    <p class="category-description">Pizze artigianali con impasto a lievitazione 72 ore</p>
+                </div>
+                
+                <div class="menu-items-list">
+                    <!-- Margherita -->
+                    <div class="menu-item-fullscreen">
+                        <div class="menu-item-content">
+                            <div class="dish-header">
+                                <h3 class="dish-name">Margherita</h3>
+                                <div class="dish-price">€ 9,00</div>
+                            </div>
+                            <p class="dish-description">Pomodoro, mozzarella fior di latte, basilico fresco</p>
+                            <div class="dish-tags">
+                                <span class="dish-tag">Classica</span>
+                                <span class="dish-tag">Vegetariana</span>
+                            </div>
+                        </div>
+                        <div class="menu-item-image">
+                            <img src="assets/images/margherita.jpg" alt="Pizza Margherita">
+                        </div>
+                    </div>
+                    
+                    <!-- Diavola -->
+                    <div class="menu-item-fullscreen">
+                        <div class="menu-item-content">
+                            <div class="dish-header">
+                                <h3 class="dish-name">Diavola</h3>
+                                <div class="dish-price">€ 11,00</div>
+                            </div>
+                            <p class="dish-description">Pomodoro, mozzarella, salame piccante, peperoncino</p>
+                            <div class="dish-tags">
+                                <span class="dish-tag">Piccante</span>
+                            </div>
+                        </div>
+                        <div class="menu-item-image">
+                            <img src="assets/images/salamino.jpg" alt="Pizza Diavola">
+                        </div>
+                    </div>
+                    
+                    <!-- Quattro Formaggi -->
+                    <div class="menu-item-fullscreen">
+                        <div class="menu-item-content">
+                            <div class="dish-header">
+                                <h3 class="dish-name">Quattro Formaggi</h3>
+                                <div class="dish-price">€ 12,00</div>
+                            </div>
+                            <p class="dish-description">Mozzarella, gorgonzola, taleggio, parmigiano</p>
+                            <div class="dish-tags">
+                                <span class="dish-tag">Vegetariana</span>
+                                <span class="dish-tag">4 formaggi</span>
+                            </div>
+                        </div>
+                        <div class="menu-item-image">
+                            <img src="assets/images/4-formaggi.jpg" alt="Pizza Quattro Formaggi">
+                        </div>
+                    </div>
+                    
+                    <!-- Capricciosa -->
+                    <div class="menu-item-fullscreen">
+                        <div class="menu-item-content">
+                            <div class="dish-header">
+                                <h3 class="dish-name">Capricciosa</h3>
+                                <div class="dish-price">€ 13,00</div>
+                            </div>
+                            <p class="dish-description">Pomodoro, mozzarella, prosciutto cotto, funghi, carciofi, olive</p>
+                        </div>
+                        <div class="menu-item-image">
+                            <img src="assets/images/capricciosa.avif" alt="Pizza Capricciosa">
+                        </div>
+                    </div>
+                    
+                    <!-- Prosciutto e Rucola -->
+                    <div class="menu-item-fullscreen">
+                        <div class="menu-item-content">
+                            <div class="dish-header">
+                                <h3 class="dish-name">Prosciutto e Rucola</h3>
+                                <div class="dish-price">€ 12,50</div>
+                            </div>
+                            <p class="dish-description">Pomodoro, mozzarella, prosciutto crudo, rucola, scaglie di parmigiano</p>
+                        </div>
+                        <div class="menu-item-image">
+                            <img src="assets/images/prosciutto-rucola.jpg" alt="Pizza Prosciutto e Rucola">
+                        </div>
+                    </div>
+                    
+                    <!-- Vegana -->
+                    <div class="menu-item-fullscreen">
+                        <div class="menu-item-content">
+                            <div class="dish-header">
+                                <h3 class="dish-name">Vegana</h3>
+                                <div class="dish-price">€ 11,50</div>
+                            </div>
+                            <p class="dish-description">Pomodoro, mozzarella vegana, verdure grigliate, origano</p>
+                            <div class="dish-tags">
+                                <span class="dish-tag">Vegana</span>
+                                <span class="dish-tag">Senza lattosio</span>
+                            </div>
+                        </div>
+                        <div class="menu-item-image">
+                            <img src="assets/images/vegana.webp" alt="Pizza Vegana">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Primi Piatti -->
+            <section id="primi" class="menu-category-section">
+                <div class="category-header">
+                    <h2 class="category-title">🍝 Primi Piatti (5)</h2>
+                    <p class="category-description">Pasta fresca e risotti preparati al momento</p>
+                </div>
+                
+                <div class="menu-items-list">
+                    <!-- Spaghetti alla Carbonara -->
+                    <div class="menu-item-fullscreen">
+                        <div class="menu-item-content">
+                            <div class="dish-header">
+                                <h3 class="dish-name">Spaghetti alla Carbonara</h3>
+                                <div class="dish-price">€ 13,00</div>
+                            </div>
+                            <p class="dish-description">Uova, guanciale, pecorino, pepe nero</p>
+                            <div class="dish-tags">
+                                <span class="dish-tag">Classico romano</span>
+                            </div>
+                        </div>
+                        <div class="menu-item-image">
+                            <img src="assets/images/carbonara.jpg" alt="Spaghetti alla Carbonara">
+                        </div>
+                    </div>
+                    
+                    <!-- Tagliatelle al Ragù -->
+                    <div class="menu-item-fullscreen">
+                        <div class="menu-item-content">
+                            <div class="dish-header">
+                                <h3 class="dish-name">Tagliatelle al Ragù</h3>
+                                <div class="dish-price">€ 14,00</div>
+                            </div>
+                            <p class="dish-description">Ragù di carne tradizionale, parmigiano</p>
+                        </div>
+                        <div class="menu-item-image">
+                            <img src="assets/images/tagliatelle.jpg" alt="Tagliatelle al Ragù">
+                        </div>
+                    </div>
+                    
+                    <!-- Risotto ai Funghi Porcini -->
+                    <div class="menu-item-fullscreen">
+                        <div class="menu-item-content">
+                            <div class="dish-header">
+                                <h3 class="dish-name">Risotto ai Funghi Porcini</h3>
+                                <div class="dish-price">€ 15,00</div>
+                            </div>
+                            <p class="dish-description">Riso Carnaroli, funghi porcini, burro e parmigiano</p>
+                            <div class="dish-tags">
+                                <span class="dish-tag">Vegetariano</span>
+                                <span class="dish-tag">Autunnale</span>
+                            </div>
+                        </div>
+                        <div class="menu-item-image">
+                            <img src="assets/images/risotto.jpg" alt="Risotto ai Funghi Porcini">
+                        </div>
+                    </div>
+                    
+                    <!-- Gnocchi al Pesto -->
+                    <div class="menu-item-fullscreen">
+                        <div class="menu-item-content">
+                            <div class="dish-header">
+                                <h3 class="dish-name">Gnocchi al Pesto</h3>
+                                <div class="dish-price">€ 12,50</div>
+                            </div>
+                            <p class="dish-description">Gnocchi di patate freschi con pesto genovese</p>
+                            <div class="dish-tags">
+                                <span class="dish-tag">Vegetariano</span>
+                            </div>
+                        </div>
+                        <div class="menu-item-image">
+                            <img src="assets/images/gnocchi.webp" alt="Gnocchi al Pesto">
+                        </div>
+                    </div>
+                    
+                    <!-- Lasagna alla Bolognese -->
+                    <div class="menu-item-fullscreen">
+                        <div class="menu-item-content">
+                            <div class="dish-header">
+                                <h3 class="dish-name">Lasagna alla Bolognese</h3>
+                                <div class="dish-price">€ 14,50</div>
+                            </div>
+                            <p class="dish-description">Strati di pasta, ragù, besciamella, parmigiano</p>
+                        </div>
+                        <div class="menu-item-image">
+                            <img src="assets/images/lasagne.jpg" alt="Lasagna alla Bolognese">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Secondi Piatti -->
+            <section id="secondi" class="menu-category-section">
+                <div class="category-header">
+                    <h2 class="category-title">🥩 Secondi Piatti (5)</h2>
+                    <p class="category-description">Carni e pesci selezionati con cura</p>
+                </div>
+                
+                <div class="menu-items-list">
+                    <!-- Saltimbocca alla Romana -->
+                    <div class="menu-item-fullscreen">
+                        <div class="menu-item-content">
+                            <div class="dish-header">
+                                <h3 class="dish-name">Saltimbocca alla Romana</h3>
+                                <div class="dish-price">€ 18,00</div>
+                            </div>
+                            <p class="dish-description">Vitello, prosciutto crudo, salvia, vino bianco</p>
+                        </div>
+                        <div class="menu-item-image">
+                            <img src="assets/images/saltimbocca.jpg" alt="Saltimbocca alla Romana">
+                        </div>
+                    </div>
+                    
+                    <!-- Pollo alla Cacciatora -->
+                    <div class="menu-item-fullscreen">
+                        <div class="menu-item-content">
+                            <div class="dish-header">
+                                <h3 class="dish-name">Pollo alla Cacciatora</h3>
+                                <div class="dish-price">€ 16,50</div>
+                            </div>
+                            <p class="dish-description">Pollo, pomodoro, olive, vino rosso</p>
+                        </div>
+                        <div class="menu-item-image">
+                            <img src="assets/images/pollo.jpg" alt="Pollo alla Cacciatora">
+                        </div>
+                    </div>
+                    
+                    <!-- Bistecca alla Griglia -->
+                    <div class="menu-item-fullscreen">
+                        <div class="menu-item-content">
+                            <div class="dish-header">
+                                <h3 class="dish-name">Bistecca alla Griglia</h3>
+                                <div class="dish-price">€ 24,00</div>
+                            </div>
+                            <p class="dish-description">Taglio a scelta, contorno di verdure grigliate</p>
+                            <div class="dish-tags">
+                                <span class="dish-tag">Alta qualità</span>
+                            </div>
+                        </div>
+                        <div class="menu-item-image">
+                            <img src="assets/images/bistecca.jpg" alt="Bistecca alla Griglia">
+                        </div>
+                    </div>
+                    
+                    <!-- Filetto di Branzino al Forno -->
+                    <div class="menu-item-fullscreen">
+                        <div class="menu-item-content">
+                            <div class="dish-header">
+                                <h3 class="dish-name">Filetto di Branzino al Forno</h3>
+                                <div class="dish-price">€ 19,50</div>
+                            </div>
+                            <p class="dish-description">Branzino, erbe aromatiche, limone</p>
+                        </div>
+                        <div class="menu-item-image">
+                            <img src="assets/images/branzino.jpg" alt="Filetto di Branzino al Forno">
+                        </div>
+                    </div>
+                    
+                    <!-- Parmigiana di Melanzane -->
+                    <div class="menu-item-fullscreen">
+                        <div class="menu-item-content">
+                            <div class="dish-header">
+                                <h3 class="dish-name">Parmigiana di Melanzane</h3>
+                                <div class="dish-price">€ 14,00</div>
+                            </div>
+                            <p class="dish-description">Melanzane, pomodoro, mozzarella, parmigiano</p>
+                            <div class="dish-tags">
+                                <span class="dish-tag">Vegetariano</span>
+                            </div>
+                        </div>
+                        <div class="menu-item-image">
+                            <img src="assets/images/parmigiana.jpg" alt="Parmigiana di Melanzane">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Dolci -->
+            <section id="dolci" class="menu-category-section">
+                <div class="category-header">
+                    <h2 class="category-title">🍰 Dolci (5)</h2>
+                    <p class="category-description">Dolci fatti in casa per concludere in bellezza</p>
+                </div>
+                
+                <div class="menu-items-list">
+                    <!-- Tiramisù Classico -->
+                    <div class="menu-item-fullscreen">
+                        <div class="menu-item-content">
+                            <div class="dish-header">
+                                <h3 class="dish-name">Tiramisù Classico</h3>
+                                <div class="dish-price">€ 7,50</div>
+                            </div>
+                            <p class="dish-description">Savoiardi, mascarpone, caffè, cacao</p>
+                            <div class="dish-tags">
+                                <span class="dish-tag">Classico italiano</span>
+                            </div>
+                        </div>
+                        <div class="menu-item-image">
+                            <img src="assets/images/tiramisu.jpg" alt="Tiramisù Classico">
+                        </div>
+                    </div>
+                    
+                    <!-- Panna Cotta al Caramello -->
+                    <div class="menu-item-fullscreen">
+                        <div class="menu-item-content">
+                            <div class="dish-header">
+                                <h3 class="dish-name">Panna Cotta al Caramello</h3>
+                                <div class="dish-price">€ 6,50</div>
+                            </div>
+                            <p class="dish-description">Panna cotta vellutata con salsa al caramello</p>
+                        </div>
+                        <div class="menu-item-image">
+                            <img src="assets/images/pannacotta.jpg" alt="Panna Cotta al Caramello">
+                        </div>
+                    </div>
+                    
+                    <!-- Cheesecake ai Frutti di Bosco -->
+                    <div class="menu-item-fullscreen">
+                        <div class="menu-item-content">
+                            <div class="dish-header">
+                                <h3 class="dish-name">Cheesecake ai Frutti di Bosco</h3>
+                                <div class="dish-price">€ 8,00</div>
+                            </div>
+                            <p class="dish-description">Base biscotto, crema di formaggio, frutti di bosco freschi</p>
+                            <div class="dish-tags">
+                                <span class="dish-tag">Frutti di bosco</span>
+                            </div>
+                        </div>
+                        <div class="menu-item-image">
+                            <img src="assets/images/cheesecake.jpg" alt="Cheesecake ai Frutti di Bosco">
+                        </div>
+                    </div>
+                    
+                    <!-- Gelato Artigianale -->
+                    <div class="menu-item-fullscreen">
+                        <div class="menu-item-content">
+                            <div class="dish-header">
+                                <h3 class="dish-name">Gelato Artigianale</h3>
+                                <div class="dish-price">€ 5,00</div>
+                            </div>
+                            <p class="dish-description">Gusti vari: vaniglia, cioccolato, pistacchio</p>
+                            <div class="dish-tags">
+                                <span class="dish-tag">Artigianale</span>
+                                <span class="dish-tag">Fatto in casa</span>
+                            </div>
+                        </div>
+                        <div class="menu-item-image">
+                            <img src="assets/images/gelato.jpg" alt="Gelato Artigianale">
+                        </div>
+                    </div>
+                    
+                    <!-- Tortino al Cuore Caldo -->
+                    <div class="menu-item-fullscreen">
+                        <div class="menu-item-content">
+                            <div class="dish-header">
+                                <h3 class="dish-name">Tortino al Cuore Caldo</h3>
+                                <div class="dish-price">€ 8,50</div>
+                            </div>
+                            <p class="dish-description">Tortino al cioccolato con interno morbido e fondente, servito caldo (dolce monoporzione dal cuore scioglievole)</p>
+                            <div class="dish-tags">
+                                <span class="dish-tag">Cioccolato</span>
+                                <span class="dish-tag">Caldo</span>
+                            </div>
+                        </div>
+                        <div class="menu-item-image">
+                            <img src="assets/images/tortino.jpg" alt="Tortino al Cuore Caldo">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer del Menu -->
+    <footer class="menu-page-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Informazioni Importanti</h3>
+                    <p>• Tutti i prezzi sono comprensivi di IVA</p>
+                    <p>• Informate il personale di eventuali allergie o intolleranze alimentari</p>
+                    <p>• Il menu può subire variazioni in base alla stagionalità dei prodotti</p>
+                    <p>• Pane e coperto: € 2,50 a persona</p>
+                </div>
+                
+                <div class="footer-actions">
+                    <a href="index.html#reservation" class="btn btn-primary btn-large">
+                        <i class="fas fa-calendar-alt"></i> Prenota un Tavolo
+                    </a>
+                    <a href="index.html" class="btn btn-secondary">
+                        <i class="fas fa-home"></i> Torna alla Home
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Officina del Gusto. Tutti i diritti riservati.</p>
+                <p>Via del Gusto 123, 00100 Roma RM | +39 06 1234 5678</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/menu.js"></script>
+</body>
+</html>

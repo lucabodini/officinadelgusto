@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Officina del Gusto - Ristorante Italiano</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Menu di navigazione -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#home" class="logo">Officina del Gusto</a>
+            <button class="menu-toggle" aria-label="Apri menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#menu" class="nav-link">Menù</a></li>
+                <li><a href="#about" class="nav-link">Chi Siamo</a></li>
+                <li><a href="#contact" class="nav-link">Contatti</a></li>
+                <li><a href="#reservation" class="nav-link btn-reservation">Prenota</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sezione Home con video background -->
+    <section id="home" class="hero-section">
+        <div class="video-container">
+            <video autoplay muted loop playsinline id="background-video">
+                <source src="assets/video/pizza.mp4" type="video/mp4">
+                Il tuo browser non supporta il video.
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+        
+        <div class="hero-content">
+            <h1 class="hero-title fade-in">Officina del Gusto</h1>
+            <p class="hero-subtitle fade-in-delay">L'arte della cucina italiana in ogni piatto</p>
+            <div class="hero-buttons fade-in-delay-2">
+                <a href="#menu" class="btn btn-primary">Scopri il Menù</a>
+                <a href="#reservation" class="btn btn-secondary">Prenota un Tavolo</a>
+            </div>
+        </div>
+        
+        <a href="#intro" class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </section>
+
+    <!-- Sezione introduttiva -->
+    <section id="intro" class="intro-section">
+        <div class="container">
+            <div class="intro-content">
+                <h2 class="section-title">Benvenuti all'Officina del Gusto</h2>
+                <p class="section-text">Un'esperienza culinaria che unisce tradizione e innovazione, dove ogni piatto racconta una storia di passione e maestria. Dal 2005, portiamo sulle vostre tavole i sapori autentici della cucina italiana con ingredienti selezionati e preparazioni artigianali.</p>
+                <div class="intro-features">
+                    <div class="feature">
+                        <i class="fas fa-seedling"></i>
+                        <h3>Ingredienti Freschi</h3>
+                        <p>Selezioniamo solo il meglio da produttori locali e a km zero.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-glass-cheers"></i>
+                        <h3>Vini Ricercati</h3>
+                        <p>Una cantina con oltre 200 etichette italiane e internazionali.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-utensils"></i>
+                        <h3>Cucina Artigianale</h3>
+                        <p>Preparazioni fatte in casa seguendo antiche ricette di famiglia.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Menù (Ora solo un'introduzione con link alla pagina menu.html) -->
+    <section id="menu" class="menu-preview-section">
+        <div class="container">
+            <div class="menu-preview-content">
+                <h2 class="section-title">Il Nostro Menù</h2>
+                <p class="section-subtitle">Scopri le nostre specialità preparate con ingredienti freschi di stagione e tanta passione per la cucina italiana.</p>
+                
+                <div class="menu-highlights">
+                    <div class="menu-highlight">
+                        <i class="fas fa-pizza-slice"></i>
+                        <h3>Pizze Artigianali</h3>
+                        <p>6 varietà di pizza preparate con impasto a lievitazione 72 ore e ingredienti di prima qualità.</p>
+                    </div>
+                    
+                    <div class="menu-highlight">
+                        <i class="fas fa-pasta"></i>
+                        <h3>Primi Piatti</h3>
+                        <p>5 specialità tra pasta fresca, risotti e lasagne preparate secondo le ricette tradizionali.</p>
+                    </div>
+                    
+                    <div class="menu-highlight">
+                        <i class="fas fa-drumstick-bite"></i>
+                        <h3>Secondi Piatti</h3>
+                        <p>5 proposte di carne e pesce, con ingredienti selezionati e cotture perfette.</p>
+                    </div>
+                </div>
+                
+                <div class="menu-cta">
+                    <a href="menu.html" class="btn btn-primary btn-large">
+                        <i class="fas fa-book-open"></i> Scopri il nostro Menu Completo
+                    </a>
+                    <p class="menu-note">Scarica il nostro menu in PDF <a href="#" class="pdf-link">qui</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Chi Siamo -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="assets/images/ristorante.jpg" alt="Interno del ristorante Officina del Gusto">
+                </div>
+                <div class="about-text">
+                    <h2 class="section-title">La Nostra Storia</h2>
+                    <p>Fondato nel 2005 da <strong>Matteo e Sofia Rossi</strong>, <strong>Officina del Gusto</strong> nasce dalla passione per la cucina autentica e il desiderio di condividere i sapori della tradizione italiana.</p>
+                    <p>Il nostro ristorante si trova nel cuore del centro storico, in un antico edificio ristrutturato che unisce il fascino della tradizione con il design contemporaneo. Le nostre sale accolgono gli ospiti in un'atmosfera calda e raffinata.</p>
+                    <p>In cucina, lo chef <strong>Luigi Bianchi</strong> e il suo team lavorano ogni giorno per creare piatti che rispettano la stagionalità degli ingredienti, valorizzando i prodotti del territorio attraverso tecniche sia tradizionali che innovative.</p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>20 anni di esperienza</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-users"></i>
+                            <span>Team di 15 professionisti</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-award"></i>
+                            <span>Eccellenza culinaria</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Contatti e Prenotazioni -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2 class="section-title">Contattaci</h2>
+                    <p>Siamo aperti dal martedì alla domenica per offrirvi la migliore esperienza culinaria.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h3>Indirizzo</h3>
+                                <p>Via del Gusto 123, 00100 Roma RM</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h3>Telefono</h3>
+                                <p>+39 06 1234 5678</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>Email</h3>
+                                <p>info@officinadelgusto.it</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h3>Orari</h3>
+                                <p>Martedì - Domenica: 12:00 - 15:00 / 19:00 - 23:00</p>
+                                <p>Lunedì: Chiuso</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+                        <a href="#" aria-label="Google"><i class="fab fa-google"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div id="reservation" class="reservation-form">
+                    <h2 class="section-title">Prenota un Tavolo</h2>
+                    <p>Compila il modulo per prenotare il tuo tavolo. Ti confermeremo la disponibilità via email o telefono.</p>
+                    
+                    <form id="booking-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Nome e Cognome</label>
+                            <span class="focus-border"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Email</label>
+                            <span class="focus-border"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" required>
+                            <label for="phone">Telefono</label>
+                            <span class="focus-border"></span>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="date" name="date" required onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'">
+                                <label for="date">Data</label>
+                                <span class="focus-border"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="text" id="time" name="time" required onfocus="(this.type='time')" onblur="if(!this.value)this.type='text'">
+                                <label for="time">Ora</label>
+                                <span class="focus-border"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="number" id="guests" name="guests" min="1" required>
+                                <label for="guests">Numero di Ospiti</label>
+                                <span class="focus-border"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <select id="occasion" name="occasion">
+                                    <option value="" selected disabled></option>
+                                    <option value="anniversary">Anniversario</option>
+                                    <option value="birthday">Compleanno</option>
+                                    <option value="business">Cena di lavoro</option>
+                                    <option value="date">Cena romantica</option>
+                                    <option value="family">Cena in famiglia</option>
+                                    <option value="other">Altro</option>
+                                </select>
+                                <label for="occasion">Occasione</label>
+                                <span class="focus-border"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="3"></textarea>
+                            <label for="message">Note aggiuntive (allergie, richieste speciali, ecc.)</label>
+                            <span class="focus-border"></span>
+                        </div>
+                        
+                        <div class="form-notice">
+                            <p><i class="fas fa-info-circle"></i> Ti confermeremo la prenotazione entro 2 ore lavorative.</p>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <i class="fas fa-paper-plane"></i> Invia Prenotazione
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Officina del Gusto</h3>
+                    <p>L'arte della cucina italiana dal 2005</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Link Veloci</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="menu.html">Menù</a></li>
+                        <li><a href="#about">Chi Siamo</a></li>
+                        <li><a href="#contact">Contatti</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h4>Resta Aggiornato</h4>
+                    <p>Iscriviti per ricevere le nostre novità e promozioni speciali.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="La tua email">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Officina del Gusto. Tutti i diritti riservati.</p>
+                <p>Design e sviluppo con <i class="fas fa-heart"></i> per la cucina italiana</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
